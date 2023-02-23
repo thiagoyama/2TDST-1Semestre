@@ -14,13 +14,13 @@ public class TesteAluno {
 		Calendar data = new GregorianCalendar(2004, Calendar.MARCH, 30);
 		
 		//Instanciar um aluno com o nome, genero e data nascimento
-		Aluno aluno = new Aluno("Kleberson", data, Genero.MASCULINO);
+		Aluno aluno = new Aluno("Kleberson", data, Genero.OUTROS);
 		
 		//Verificar se o aluno possui o genero FEMININO
 		if (aluno.getGenero() == Genero.FEMININO)
 			System.out.println("Feminino");
 		
 		//Exibir o genero do aluno
-		System.out.println(aluno.getGenero().getLabel());
+		System.out.println(aluno.getGenero());
 	}
 }
