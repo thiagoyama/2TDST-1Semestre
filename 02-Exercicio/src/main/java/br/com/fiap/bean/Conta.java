@@ -5,7 +5,7 @@ import java.util.Calendar;
 import br.com.fiap.exception.SaldoInsuficienteException;
 
 //Classe abstrata: estrutura para as classes filhas
-//1 - Não pode ser instanciada, 2-pode conter métodos abstratos (sem implementação) 
+//1 - Nao pode ser instanciada, 2-pode conter mï¿½todos abstratos (sem implementaï¿½ï¿½o) 
 public abstract class Conta {
 
 	//Atributos
@@ -14,9 +14,12 @@ public abstract class Conta {
 	private Calendar dataAbertura;
 	protected double saldo;
 
-	//Métodos
+	//Mï¿½todos
 	public abstract void retirar(double valor) throws SaldoInsuficienteException;
-	public abstract void depositar(double valor);
+	
+	public void depositar(double valor) {
+		saldo += valor;
+	}
 	
 	//CTRL + 3 -> gcuf (Construtores)
 	public Conta() {}

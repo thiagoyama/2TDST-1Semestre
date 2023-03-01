@@ -18,16 +18,11 @@ public class ContaCorrente extends Conta {
 	@Override
 	public void retirar(double valor) throws SaldoInsuficienteException {
 		if (tipo == TipoConta.COMUM && saldo < valor) {
-			throw new SaldoInsuficienteException("Conta comum não pode ter saldo negativo");
+			throw new SaldoInsuficienteException("Conta comum nï¿½o pode ter saldo negativo");
 		}
 		saldo -= valor;
 	}
-
-	@Override
-	public void depositar(double valor) {
-		saldo += valor; //saldo = saldo + valor;
-	}
-
+	
 	public TipoConta getTipo() {
 		return tipo;
 	}

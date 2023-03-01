@@ -8,7 +8,7 @@ public class ContaPoupanca extends Conta implements ContaInvestimento {
 
 	private float taxa;
 	
-	public static final float RENDIMENTO = 0.05f; //f no final, define que o número é do tipo float
+	public static final float RENDIMENTO = 0.05f; //f no final, define que o nï¿½mero ï¿½ do tipo float
 	
 	public double calculaRetornoInvestimento() {
 		return RENDIMENTO * saldo;
@@ -28,11 +28,6 @@ public class ContaPoupanca extends Conta implements ContaInvestimento {
 			throw new SaldoInsuficienteException("Saldo insufuciente");
 		}
 		saldo -= valor + taxa;
-	}
-
-	@Override
-	public void depositar(double valor) {
-		saldo += valor;
 	}
 
 	public float getTaxa() {
