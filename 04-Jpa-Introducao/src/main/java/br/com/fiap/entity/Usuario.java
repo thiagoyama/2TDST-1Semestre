@@ -42,10 +42,10 @@ public class Usuario {
 	@Column(name="ds_email", nullable = false, length = 30)
 	private String email;
 	
-	@Column(name="vl_altura", precision = 1 , scale = 2)
+	@Column(name="vl_altura", precision = 3 , scale = 2)
 	private Float altura;
 	
-	@Transient //N√£o ser√° uma coluna na tabela
+	@Transient //N„o ser· uma coluna na tabela
 	private String token;
 	
 	@Lob //Mapeia um campo do tipo BLOB, que recebe arquivos (foto)
@@ -55,6 +55,86 @@ public class Usuario {
 	@Enumerated(EnumType.STRING)//Grava o texto da constante e n√£o a posicao
 	@Column(name="ds_tipo", length = 20)
 	private TipoUsuario tipo;
+	
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+	public Calendar getDataCriacao() {
+		return dataCriacao;
+	}
+
+	public void setDataCriacao(Calendar dataCriacao) {
+		this.dataCriacao = dataCriacao;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Float getAltura() {
+		return altura;
+	}
+
+	public void setAltura(Float altura) {
+		this.altura = altura;
+	}
+
+	public String getToken() {
+		return token;
+	}
+
+	public void setToken(String token) {
+		this.token = token;
+	}
+
+	public byte[] getFoto() {
+		return foto;
+	}
+
+	public void setFoto(byte[] foto) {
+		this.foto = foto;
+	}
+
+	public TipoUsuario getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(TipoUsuario tipo) {
+		this.tipo = tipo;
+	}
 	
 }
 
