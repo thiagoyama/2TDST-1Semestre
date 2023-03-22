@@ -13,7 +13,7 @@ public class TesteCadastro {
 		//Instanciar um Usuario 
 		Usuario user = new Usuario("Renato Augusto", "123", 
 				"45654654646", "renato@timao.com", 1.8f, TipoUsuario.DEFAULT);
-		
+
 		//Criar a fabrica de Entity Manager
 		EntityManagerFactory fabrica =
 			Persistence.createEntityManagerFactory("CLIENTE_ORACLE");
