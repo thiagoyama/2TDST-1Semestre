@@ -9,6 +9,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.PostLoad;
+import javax.persistence.PostUpdate;
+import javax.persistence.PrePersist;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -69,6 +72,13 @@ public class Usuario {
 		this.email = email;
 		this.altura = altura;
 		this.tipo = tipo;
+	}
+	
+	@PrePersist //Antes de cadastrar
+	@PostUpdate //Após atualizar
+	@PostLoad //Executa apos um select
+	private void executar() {
+		System.out.println("Executando um comando SQL");
 	}
 
 	public int getCodigo() {
