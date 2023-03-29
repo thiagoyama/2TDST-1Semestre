@@ -5,7 +5,7 @@ import javax.persistence.Persistence;
 
 public class EntityManagerFactorySingleton {
 
-	//Atributo estático que armazena a unica instancia
+	//Atributo estatico que armazena a unica instancia
 	private static EntityManagerFactory emFactory;
 	
 	//Construtor privado
