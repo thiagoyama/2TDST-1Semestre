@@ -15,7 +15,7 @@ public abstract class GenericDaoImpl<E,K> implements GenericDao<E, K>{
 	@SuppressWarnings("all")
 	public GenericDaoImpl(EntityManager em) {
 		this.em = em;
-		//Obter o .class de E em tempo de execução
+		//Obter o .class de E em tempo de execucao
 		this.clazz = (Class<E>) ((ParameterizedType) 
 				getClass().getGenericSuperclass())
 				.getActualTypeArguments()[0];
@@ -24,7 +24,7 @@ public abstract class GenericDaoImpl<E,K> implements GenericDao<E, K>{
 	//Cadastra ou atualiza
 	public void salvar(E entidade) {
 		em.merge(entidade);
-	}
+	};
 
 	public void deletar(K id) throws EntidadeNaoEcontradaException {
 		E entidade = buscar(id);
