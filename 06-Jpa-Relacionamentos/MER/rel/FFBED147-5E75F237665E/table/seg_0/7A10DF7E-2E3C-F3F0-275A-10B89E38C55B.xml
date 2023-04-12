@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7A10DF7E-2E3C-F3F0-275A-10B89E38C55B" name="TB_PEDIDO">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:08:21 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_pedido" id="51970008-CFF4-3B8D-D65A-D89EC1C81812">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:08:51 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_pedido" id="E1219D1C-FBEC-2838-0C44-F0AE6ECEDEDC">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:08:51 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="vl_pedido" id="964D289C-1D6B-8591-900B-F0199684B1FA">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:08:51 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cd_cliente" id="55F441B4-268E-FF1A-518D-AC3FE3474428">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:10:51 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="595758F5-B670-D1EA-D2BA-28ADFEB95CB4" referredColumn="20E21823-63AD-F626-CDDD-95663D4BB8EF"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="69DF6B17-048C-BF5F-C695-1F757CB26BEA" name="TB_PEDIDO_PK">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:08:51 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="51970008-CFF4-3B8D-D65A-D89EC1C81812"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1D7FEAF4-D037-604D-1711-072A875B587A" name="TB_PEDIDO_TB_CLIENTE_FK">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:10:51 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="55F441B4-268E-FF1A-518D-AC3FE3474428"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

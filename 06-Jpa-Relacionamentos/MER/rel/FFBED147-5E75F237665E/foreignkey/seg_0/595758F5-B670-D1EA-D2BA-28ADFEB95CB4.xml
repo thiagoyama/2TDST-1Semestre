@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="595758F5-B670-D1EA-D2BA-28ADFEB95CB4" containerWithKeyObject="7A10DF7E-2E3C-F3F0-275A-10B89E38C55B" localFKIndex="1D7FEAF4-D037-604D-1711-072A875B587A" name="TB_PEDIDO_TB_CLIENTE_FK">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:10:51 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<referredTableLongName>TB_CLIENTE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>9C6D9646-F8D0-CDAC-0059-C68A752C5C1E</referredTableID>
+<keyObject>7A084F2D-0138-6297-EE45-5912310D347A</keyObject>
+<referredKeyID>7A084F2D-0138-6297-EE45-5912310D347A</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cd_cliente</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

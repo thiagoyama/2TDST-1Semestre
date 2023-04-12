@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9C6D9646-F8D0-CDAC-0059-C68A752C5C1E" name="TB_CLIENTE">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:07:47 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_cliente" id="20E21823-63AD-F626-CDDD-95663D4BB8EF">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:08:18 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_cliente" id="C27EC583-6B0F-9005-FD80-D6CA697C4D08">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:08:18 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>80</dataTypeSize>
+<ownDataTypeParameters>80,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_nascimento" id="568F8DE9-FAE2-2C78-DDE3-8445C36E1C30">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:08:18 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7A084F2D-0138-6297-EE45-5912310D347A" name="TB_CLIENTE_PK">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:08:18 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="20E21823-63AD-F626-CDDD-95663D4BB8EF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

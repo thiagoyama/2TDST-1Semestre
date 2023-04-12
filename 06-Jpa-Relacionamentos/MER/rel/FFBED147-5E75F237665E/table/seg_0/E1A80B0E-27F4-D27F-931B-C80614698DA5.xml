@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E1A80B0E-27F4-D27F-931B-C80614698DA5" name="TB_PRODUTO">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:09:33 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_produto" id="383E3E1B-5E5F-FDF9-18ED-57DBFBCCA6E2">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:10:35 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_produto" id="F28C106C-4E68-4591-FD3C-0797E6A3939E">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:10:35 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>80</dataTypeSize>
+<ownDataTypeParameters>80,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="vl_produto" id="4B1C80A3-ECB7-D585-34F9-8B92D7456270">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:10:35 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="qt_estoque" id="DD5E5806-C264-E195-E469-40D1BB18545B">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:10:35 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D69E05FB-5DB7-EA91-A4B1-5F1659DBCAC4" name="TB_PRODUTO_PK">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:10:35 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="383E3E1B-5E5F-FDF9-18ED-57DBFBCCA6E2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C9692782-13C2-DCE5-6D67-FE0063021902" name="TB_NOTA_FISCAL">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:08:55 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_nota" id="44D056B2-B156-02FF-D9C5-AA783E810473">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:09:31 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_nota" id="5C762997-DB13-74F6-DF13-2FFACA68EFC6">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:09:31 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="vl_nota" id="DCB2E954-8125-FD49-9EF6-856C14A7D246">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:09:31 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cd_pedido" id="00845FD3-8D56-3173-45AE-AE5EB9DE4DFB">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:13:02 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DCE79B1D-3C1B-7978-7362-290520CB0ACC" referredColumn="51970008-CFF4-3B8D-D65A-D89EC1C81812"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="53E0393A-F6DF-668F-499B-500AFB7FF664" name="TB_NOTA_FISCAL_PK">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:10:44 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="44D056B2-B156-02FF-D9C5-AA783E810473"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6F63694D-929C-8CDE-77FC-9AA75F3AF945" name="TB_NOTA_FISCAL__UN">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:13:15 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="00845FD3-8D56-3173-45AE-AE5EB9DE4DFB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6B50F68D-CB61-09BB-6F13-1422AD107DAB" name="TB_NOTA_FISCAL_TB_PEDIDO_FK">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:13:02 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="00845FD3-8D56-3173-45AE-AE5EB9DE4DFB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

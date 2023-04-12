@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="62027C05-0836-E98F-4CB5-F32CB2596D7D" name="TB_ITEM_PEDIDO">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:12:06 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<ordsAlias>table_6</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_pedido" id="8A0F834B-992F-E94F-3256-15A6F8190520">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:12:16 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="49811B98-40D8-3726-B111-F90F168DC13D" referredColumn="51970008-CFF4-3B8D-D65A-D89EC1C81812"/>
+</associations>
+</Column>
+<Column name="cd_produto" id="FACBF1A1-51C3-90E5-78C4-0E072EFA2296">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:12:19 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6FA809A2-702F-E286-37EA-0B43A1535058" referredColumn="383E3E1B-5E5F-FDF9-18ED-57DBFBCCA6E2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D98AB48F-5EB0-D220-B98F-855014B21559" name="TB_ITEM_PEDIDO_PK">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:12:33 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8A0F834B-992F-E94F-3256-15A6F8190520"/>
+<colUsage columnID="FACBF1A1-51C3-90E5-78C4-0E072EFA2296"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6FA05631-E3DC-DAD5-D284-4107EA983295" name="TB_ITEM_PEDIDO_TB_PEDIDO_FK">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:12:16 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8A0F834B-992F-E94F-3256-15A6F8190520"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B91B2D5F-9C78-EE73-D767-3C95FB305987" name="TB_ITEM_PEDIDO_TB_PRODUTO_FK">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:12:19 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FACBF1A1-51C3-90E5-78C4-0E072EFA2296"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

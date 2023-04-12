@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="MER" id="FE1AFC26-CE3B-F38F-AC1A-E6FECE5DD230" version="3.5">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-12 22:07:19 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>FE1AFC26-CE3B-F38F-AC1A-E6FECE5DD230</designId>
+</OSDM_Design>
