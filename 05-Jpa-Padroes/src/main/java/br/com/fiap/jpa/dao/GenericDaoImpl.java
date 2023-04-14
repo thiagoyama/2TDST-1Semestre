@@ -22,8 +22,8 @@ public abstract class GenericDaoImpl<E,K> implements GenericDao<E, K>{
 	}
 	
 	//Cadastra ou atualiza
-	public void salvar(E entidade) {
-		em.merge(entidade);
+	public E salvar(E entidade) {
+		return em.merge(entidade); //Retorna o objeto com ID
 	};
 
 	public void deletar(K id) throws EntidadeNaoEcontradaException {

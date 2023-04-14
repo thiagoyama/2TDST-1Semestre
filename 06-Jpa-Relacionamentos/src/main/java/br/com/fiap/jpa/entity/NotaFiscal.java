@@ -2,8 +2,10 @@ package br.com.fiap.jpa.entity;
 
 import java.util.Calendar;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -32,9 +34,18 @@ public class NotaFiscal {
 	private Double valor;
 	
 	//1:1 (FK)
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name="cd_pedido", nullable = false)
 	private Pedido pedido;
+	
+	public NotaFiscal() {
+	}
+
+	public NotaFiscal(Calendar data, Double valor, Pedido pedido) {
+		this.data = data;
+		this.valor = valor;
+		this.pedido = pedido;
+	}
 
 	public Integer getCodigo() {
 		return codigo;
