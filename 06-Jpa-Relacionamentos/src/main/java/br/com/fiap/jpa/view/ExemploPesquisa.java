@@ -20,11 +20,11 @@ public class ExemploPesquisa {
 		
 		try {
 			//Pesquisar a nota fiscal pelo ID
-			NotaFiscal nota = notaDao.buscar(6);
+			NotaFiscal nota = notaDao.buscar(2);
 			
 			//Exibir o Valor da Nota Fiscal e o Valor do Pedido
 			System.out.println("Valor da nota: " + nota.getValor());
-			System.out.println("Valor do pedido: " + nota.getPedido().getValor());
+			//System.out.println("Valor do pedido: " + nota.getPedido().getValor());
 		} catch(EntidadeNaoEcontradaException e) {
 			System.out.println(e.getMessage());
 		}

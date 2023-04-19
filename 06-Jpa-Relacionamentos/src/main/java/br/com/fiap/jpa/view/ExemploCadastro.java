@@ -44,5 +44,6 @@ public class ExemploCadastro {
 		} catch(CommitException e) {
 			System.out.println(e.getMessage());
 		}
+		
 	}
 }

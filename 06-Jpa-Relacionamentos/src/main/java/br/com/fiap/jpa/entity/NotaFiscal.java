@@ -34,7 +34,7 @@ public class NotaFiscal {
 	private Double valor;
 	
 	//1:1 (FK)
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JoinColumn(name="cd_pedido", nullable = false)
 	private Pedido pedido;
 	

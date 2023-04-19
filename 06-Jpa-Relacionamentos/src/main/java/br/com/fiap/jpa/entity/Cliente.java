@@ -1,12 +1,16 @@
 package br.com.fiap.jpa.entity;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -29,5 +33,55 @@ public class Cliente {
 	@Column(name="dt_nascimento")
 	private Calendar dataNascimento;
 	
+	@OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+	private List<Pedido> pedidos = new ArrayList<Pedido>();
+	
+	//Criar o método addPedido
+	public void addPedido(Pedido pedido) {
+		//Setar o cliente no pedido
+		pedido.setCliente(this);
+		//Adicionar o pedido na lista de pedidos do cliente
+		pedidos.add(pedido);
+	}
+
+	public Cliente() {
+	}
+	
+	public Cliente(String nome, Calendar dataNascimento) {
+		this.nome = nome;
+		this.dataNascimento = dataNascimento;
+	}
+
+	public Integer getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Calendar getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(Calendar dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+
+	public List<Pedido> getPedidos() {
+		return pedidos;
+	}
+
+	public void setPedidos(List<Pedido> pedidos) {
+		this.pedidos = pedidos;
+	}
 	
 }
