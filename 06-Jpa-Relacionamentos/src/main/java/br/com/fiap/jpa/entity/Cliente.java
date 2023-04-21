@@ -7,6 +7,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -33,10 +34,10 @@ public class Cliente {
 	@Column(name="dt_nascimento")
 	private Calendar dataNascimento;
 	
-	@OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<Pedido> pedidos = new ArrayList<Pedido>();
 	
-	//Criar o método addPedido
+	//Criar o metodo addPedido
 	public void addPedido(Pedido pedido) {
 		//Setar o cliente no pedido
 		pedido.setCliente(this);
