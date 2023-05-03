@@ -26,17 +26,26 @@ public class Sistema {
 	@Column(name="nom_sistema")
 	private String nome;
 	
-	//Relação 1:N
+	//Relaï¿½ï¿½o 1:N
 	@OneToMany(mappedBy = "sistema", cascade = CascadeType.ALL)
 	private List<CasoTeste> casosTestes = new ArrayList<CasoTeste>();
 	
-	//Método para adicionar caso de teste no sistema
+	//Mï¿½todo para adicionar caso de teste no sistema
 	public void addCasoTeste(CasoTeste caso) {
 		//Adicionar o caso na lista
 		casosTestes.add(caso);
 		//Setar o sistema no caso (FK)
 		caso.setSistema(this);
 	}
+	
+	public Sistema() {
+	}
+
+	public Sistema(String nome) {
+		this.nome = nome;
+	}
+
+
 
 	public Integer getCodigo() {
 		return codigo;

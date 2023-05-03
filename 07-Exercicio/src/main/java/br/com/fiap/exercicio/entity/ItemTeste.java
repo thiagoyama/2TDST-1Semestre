@@ -28,17 +28,24 @@ public class ItemTeste {
 	@Column(name="des_item_teste")
 	private String descricao;
 	
-	//Relação N:1
+	//Relaï¿½ï¿½o N:1
 	@ManyToOne
 	@JoinColumn(name="cod_caso_teste")
 	private CasoTeste caso;
 	
-	//Relação N:M
+	//Relaï¿½ï¿½o N:M
 	@ManyToMany(cascade = CascadeType.MERGE)
 	@JoinTable(name="TAB_ITEM_TESTE_USUARIO",
 			joinColumns = @JoinColumn(name="cod_item_teste"),
 			inverseJoinColumns = @JoinColumn(name="cod_usuario"))
 	private List<Usuario> usuarios;
+
+	public ItemTeste() {
+	}
+	
+	public ItemTeste(String descricao) {
+		this.descricao = descricao;
+	}
 
 	public Integer getCodigo() {
 		return codigo;

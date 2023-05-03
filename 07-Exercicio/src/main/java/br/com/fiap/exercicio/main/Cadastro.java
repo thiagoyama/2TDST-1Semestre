@@ -1,31 +1,68 @@
 package br.com.fiap.exercicio.main;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import br.com.fiap.exercicio.dao.SistemaDao;
+import br.com.fiap.exercicio.dao.impl.SistemaDaoImpl;
+import br.com.fiap.exercicio.entity.CasoTeste;
+import br.com.fiap.exercicio.entity.ItemTeste;
+import br.com.fiap.exercicio.entity.Sistema;
+import br.com.fiap.exercicio.entity.Usuario;
+import br.com.fiap.jpa.exception.CommitException;
+import br.com.fiap.jpa.sigleton.EntityManagerFactorySingleton;
+
 public class Cadastro {
 
-	//Cadastrar todas as entidades utilizando o cascade
+	// Cadastrar todas as entidades utilizando o cascade
 	public static void main(String[] args) {
+		// Fabrica e Entity Manager
+		EntityManager em = EntityManagerFactorySingleton.getInstance().createEntityManager();
+
+		// Instanciar o SistemaDao
+		SistemaDao dao = new SistemaDaoImpl(em);
+
+		// Instanciar o sistema
+		Sistema sistema = new Sistema("Portal FIAP");
+
+		// Instanciar 2 casos de teste
+		CasoTeste caso1 = new CasoTeste("Notas", "Lan√ßamento de Notas");
+		CasoTeste caso2 = new CasoTeste("Aprova√ß√£o", "Aprovar um aluno");
+
+		// Adicionar os casos de teste no sistema
+		sistema.addCasoTeste(caso1);
+		sistema.addCasoTeste(caso2);
 		
-		//Fabrica e Entity Manager
-		
-		//Instanciar o SistemaDao
-		
-		//Instanciar o sistema
-		
-		//Instanciar 2 casos de teste
-		
-		//Adicionar os casos de teste no sistema
-		
-		//Instanciar 2 itens de teste
-		
-		//Adicionar os itens de teste no caso de teste
-		
-		//Instanciar 2 usu·rios
-		
-		//Criar uma lista de Usu·rios e adicionar os usu·rios
-		
-		//Setar a lista de usu·rio nos itens de teste
-		
-		//Cadastrar o Sistema
-		
+		// Instanciar 2 itens de teste
+		ItemTeste item1 = new ItemTeste("Lan√ßar notas para os alunos");
+		ItemTeste item2 = new ItemTeste("Aprovar alunos com m√©dia");
+
+		// Adicionar os itens de teste no caso de teste
+		caso1.addItemTeste(item1);
+		caso2.addItemTeste(item2);
+
+		// Instanciar 2 usuarios
+		Usuario user1 = new Usuario("Admin");
+		Usuario user2 = new Usuario("Prof");
+
+		// Criar uma lista de Usuarios e adicionar os usuÔøΩrios
+		List<Usuario> lista = new ArrayList<Usuario>();
+		lista.add(user1);
+		lista.add(user2);
+
+		// Setar a lista de usuario nos itens de teste
+		item1.setUsuarios(lista);
+		item2.setUsuarios(lista);
+
+		try {
+			// Cadastrar o Sistema
+			dao.salvar(sistema);
+			dao.commit();
+		} catch (CommitException e) {
+			e.printStackTrace();
+		}
+
 	}
 }

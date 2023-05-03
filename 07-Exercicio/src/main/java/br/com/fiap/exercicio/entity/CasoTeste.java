@@ -31,12 +31,12 @@ public class CasoTeste {
 	@Column(name="des_caso_teste")
 	private String descricao;
 	
-	//Relação N:1 
+	//Relaï¿½ï¿½o N:1 
 	@ManyToOne
 	@JoinColumn(name="cod_sistema", nullable = false)
 	private Sistema sistema;
 	
-	//Relação 1:N
+	//Relaï¿½ï¿½o 1:N
 	@OneToMany(mappedBy = "caso", cascade = CascadeType.ALL)
 	private List<ItemTeste> itensTeste = new ArrayList<ItemTeste>();
 	
@@ -44,6 +44,16 @@ public class CasoTeste {
 		itensTeste.add(item);
 		item.setCaso(this);
 	}
+
+	public CasoTeste() {
+	}
+	
+	public CasoTeste(String nome, String descricao) {
+		this.nome = nome;
+		this.descricao = descricao;
+	}
+
+
 
 	public Integer getCodigo() {
 		return codigo;

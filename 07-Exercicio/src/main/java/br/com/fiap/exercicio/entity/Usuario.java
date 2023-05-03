@@ -26,6 +26,13 @@ public class Usuario {
 	
 	@ManyToMany(mappedBy = "usuarios")
 	private List<ItemTeste> itensTeste;
+	
+	public Usuario() {
+	}
+
+	public Usuario(String nome) {
+		this.nome = nome;
+	}
 
 	public Integer getCodigo() {
 		return codigo;
