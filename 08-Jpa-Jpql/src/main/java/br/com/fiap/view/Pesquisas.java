@@ -5,8 +5,11 @@ import java.util.List;
 import javax.persistence.EntityManager;
 
 import br.com.fiap.dao.PacoteDao;
+import br.com.fiap.dao.TransporteDao;
 import br.com.fiap.dao.impl.PacoteDaoImpl;
+import br.com.fiap.dao.impl.TransporteDaoImpl;
 import br.com.fiap.entity.Pacote;
+import br.com.fiap.entity.Transporte;
 import br.com.fiap.singleton.EntityManagerFactorySingleton;
 
 public class Pesquisas {
@@ -26,11 +29,20 @@ public class Pesquisas {
 			System.out.println(p.getDescricao() + " " + p.getPreco());
 		}
 		
-		//Listar todos os pacotes com preço maior do que 1000 reais
+		//Listar todos os pacotes com preco maior do que 1000 reais
 		pacotes = pacoteDao.listarPorPrecoMaior(1000);
-		System.out.println("Pesquisar pacotes por preço maior");
+		System.out.println("Pesquisar pacotes por preco maior");
 		for (Pacote p : pacotes) {
 			System.out.println(p.getDescricao() + " " + p.getPreco());
+		}
+		
+		//Pesquisar um transporte
+		TransporteDao transporteDao = new TransporteDaoImpl(em);
+		Transporte transporte = transporteDao.pesquisar(3);
+		pacotes = pacoteDao.buscarPorTransporte(transporte);
+		System.out.println("Pesquisar pacotes pelo transporte");
+		for (Pacote p : pacotes) {
+			System.out.println(p.getDescricao() + " " + p.getTransporte().getEmpresa());
 		}
 		
 	}//main
