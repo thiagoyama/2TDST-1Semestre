@@ -45,9 +45,9 @@ public class PacoteDaoImpl extends GenericDaoImpl<Pacote,Integer> implements Pac
 	}
 
 	public List<Pacote> buscarPorDatas(Calendar inicio, Calendar fim) {
-		return em.createQuery("", Pacote.class)
-				.setParameter("", inicio)
-				.setParameter("", fim)
+		return em.createQuery("from Pacote p where p.dataSaida between :i and :f", Pacote.class)
+				.setParameter("i", inicio)
+				.setParameter("f", fim)
 				.getResultList();
 	}
 

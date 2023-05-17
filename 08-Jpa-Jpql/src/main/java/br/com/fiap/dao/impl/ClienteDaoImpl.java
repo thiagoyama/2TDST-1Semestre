@@ -13,9 +13,9 @@ public class ClienteDaoImpl extends GenericDaoImpl<Cliente,Integer> implements C
 	}
 
 	public List<Cliente> buscarPorNome(String nome) {
-		return em.createQuery("from Cliente where nome like :n", Cliente.class)
+		return em.createQuery("from Cliente where lower(nome) like lower(:n)", Cliente.class)
 				.setParameter("n", "%" + nome + "%")
-				.setMaxResults(2) //configurando o máximo de resultados da query
+				.setMaxResults(2) //configurando o mï¿½ximo de resultados da query
 				.getResultList();
 	}
 
@@ -31,4 +31,29 @@ public class ClienteDaoImpl extends GenericDaoImpl<Cliente,Integer> implements C
 				.getResultList();
 	}
 
+	@Override
+	public List<Cliente> buscar(String nome, String cidade) {
+		return em.createQuery("from Cliente c where c.nome like :churros "
+				+ "and c.endereco.cidade.nome like :coca", Cliente.class)
+				.setParameter("coca", "%" + cidade + "%")
+				.setParameter("churros", "%" + nome + "%")
+				.getResultList();
+	}
+
+	@Override
+	public List<Cliente> buscarPorEstados(List<String> estados) {
+		return em.createQuery("from Cliente c where "
+				+ "c.endereco.cidade.uf in :soda", Cliente.class)
+				.setParameter("soda", estados)
+				.getResultList();
+	}
+
 }
+
+
+
+
+
+
+
+
