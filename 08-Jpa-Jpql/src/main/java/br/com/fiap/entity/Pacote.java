@@ -10,10 +10,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+@NamedQuery(name="Pacote.PorIntervaloDias", query = "select p from Pacote p where p.qtdDias between :i and :f")
 
 @Entity
 @Table(name="TB_EAD_PACOTE")

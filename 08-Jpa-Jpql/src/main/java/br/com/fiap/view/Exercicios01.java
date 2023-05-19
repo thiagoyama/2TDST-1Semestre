@@ -66,6 +66,16 @@ public class Exercicios01 {
 		clientes.forEach(c -> System.out.println(c.getNome() + " " +
 				c.getEndereco().getCidade().getUf()));
 		
+		
+		//Contar os clientes por estado
+		long qtd = clienteDao.contarPorEstado("PR");
+		System.out.println("Quantidade de clientes: " + qtd );
+		
+		//Pesquisar cliente pelo CPF
+		Cliente cliente = clienteDao.buscarPorCpf("50293494030");
+		System.out.println("Buscar Cliente por CPF");
+		System.out.println(cliente.getNome() + " " + cliente.getCpf());
+		
 	}//main
 }//class
 

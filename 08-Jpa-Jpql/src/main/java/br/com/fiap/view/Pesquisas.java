@@ -51,8 +51,21 @@ public class Pesquisas {
 		Calendar inicio = new GregorianCalendar(2020, Calendar.JANUARY, 1);
 		Calendar fim = new GregorianCalendar(2021, Calendar.DECEMBER, 31);
 		pacotes = pacoteDao.buscarPorDatas(inicio, fim);
-		System.out.println("Pesquisar pacotes por data de saÃ­da");
+		System.out.println("Pesquisar pacotes por data de saida");
 		pacotes.forEach(p -> System.out.println(p.getDescricao()));
+		
+		//Somar os valores dos pacotes por um transporte
+		transporte = transporteDao.pesquisar(1);
+		double soma = pacoteDao.somarPrecosPorTransporte(transporte);
+		System.out.println("A soma dos preços dos pacote é: " + soma);
+		
+		//Pesquisar os pacotes por intervalo de dias
+		pacotes = pacoteDao.buscarPorQuantidadeDias(8, 10);
+		System.out.println("Buscar por intervalo de quantidade de dias");
+		//Exibir a descrição e a qtd Dias
+		for (Pacote p : pacotes) {
+			System.out.println(p.getDescricao() + " " + p.getQtdDias());
+		}
 		
 	}//main
 }//class

@@ -51,4 +51,19 @@ public class PacoteDaoImpl extends GenericDaoImpl<Pacote,Integer> implements Pac
 				.getResultList();
 	}
 
+	@Override
+	public Double somarPrecosPorTransporte(Transporte transporte) {
+		return em.createQuery("select sum(p.preco) from Pacote p where p.transporte = :t", Double.class)
+				.setParameter("t", transporte)
+				.getSingleResult();
+	}
+
+	@Override
+	public List<Pacote> buscarPorQuantidadeDias(int qtdMenor, int qtdMaior) {
+		return em.createNamedQuery("Pacote.PorIntervaloDias", Pacote.class)
+				.setParameter("i", qtdMenor)
+				.setParameter("f", qtdMaior)
+				.getResultList();
+	}
+
 }
